@@ -1,7 +1,8 @@
 import Signup from "./Signup";
 import AppBar from "./AppBar";
-import Courses from "./Courses";
+import Course from "./Course";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainContainer from "./MainContainer";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         <AppBar />
         <Routes>
           <Route path={"/signup"} element={<Signup />} />
-          <Route path={"/courses"} element={<Courses />} />
+          <Route path={"/course"} element={<Course />} />
+          <Route path={"/"} element={<MainContainer />} />
         </Routes>
       </Router>
     </div>

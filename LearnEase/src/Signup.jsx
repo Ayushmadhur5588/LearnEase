@@ -1,6 +1,8 @@
 import {useRef} from "react";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
 
   const username = useRef(null);
   const password = useRef(null);
@@ -18,8 +20,8 @@ const handleClick = async() => {
 })
 
 const json = await response.json();
-console.log("Success");
-console.log(json);
+localStorage.setItem("token",json.token);
+navigate("/");
 }
 
 
